@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "🛒Roomies",
+			"path": "."
+		},
+		{
+			"name": "📦 @Roomies/client",
+			"path": "src"
+		},
+	],
+	"settings": {}
+}

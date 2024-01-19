@@ -1,4 +1,8 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "zhang-renyang.vscode-react",
+    "dsznajder.es7-react-js-snippets"
+  ],
   "unwantedRecommendations": []
 }
