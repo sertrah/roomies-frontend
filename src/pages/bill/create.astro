@@ -1,12 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Home from "./../layer-prestation/pages/Home.page";
-
+import Layout from "../../layouts/Layout.astro";
+import BillPage from '../../layer-prestation/pages/Bill/Bill.page';
 
 const redirect = Astro.redirect;
 ---
 <Layout title="Welcome to Astro.">
-	<Home client:load Astro={redirect} />
+    <BillPage />
 </Layout>
 
 <style>
@@ -21,7 +20,7 @@ const redirect = Astro.redirect;
 		position: absolute;
 		top: -32px;
 		left: 50%;
-		transform: translatex(-50%);
+		transform: translatex(-50%);   
 		width: 220px;
 		height: auto;
 		z-index: -1;
