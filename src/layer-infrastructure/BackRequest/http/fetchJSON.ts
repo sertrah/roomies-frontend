@@ -20,10 +20,13 @@ export async function fetchJSON<T>(
   if (options.body) {
     options.body = JSON.stringify(options.body);
   }
+  debugger;
   const response = await fetch(url, options);
 
   try {
     const json = await response.json();
+    debugger;
+
     return response.ok
       ? (json as T)
       : Promise.reject({
@@ -32,6 +35,7 @@ export async function fetchJSON<T>(
           message: json.message || defaultMessage(response),
         });
   } catch (error) {
+    debugger;
     return Promise.reject({
       status: response.status,
       message: defaultMessage(response),

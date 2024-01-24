@@ -1,8 +1,18 @@
-
-import React from 'react'
-import InputRegister from '../../atoms/InputRegister'
+import { useEffect } from 'react';
+import { usersService } from '../../../layer-application/services/users';
+import InputRegister from '../../atoms/InputRegister';
 
 function Signup() {
+/*     useEffect(()=> {
+        submitForm({
+            "username": "harlen",
+            "password": "123132"
+        });
+    }, []) */
+
+    const submitForm = (formData: any) => { // la info del formulario
+        usersService.signUp(formData).then(() => { console.log('yuhu') })
+    }
     return (
         <div
             className="relative h-screen flex flex-col justify-center items-center text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border"
