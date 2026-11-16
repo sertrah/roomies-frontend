@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Home from "./../layer-prestation/pages/Home.page";
 
----
 
+const redirect = Astro.redirect;
+---
 <Layout title="Welcome to Astro.">
-	<Home />
+	<Home client:load Astro={redirect} />
 </Layout>
 
 <style>

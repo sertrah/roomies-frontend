@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Movements from './Home/components/Movements';
 import Bills from './Home/components/Bills';
+import FloatingBtn from './Home/components/FloatingBtn';
 
-function HomePage() {
+
+function HomePage({ Astro }: any) {
+    console.log('Astro', Astro)
     return (
         <main>
             <section>
@@ -12,6 +15,7 @@ function HomePage() {
             <section>
                 <Movements />
             </section>
+            <FloatingBtn Astro={Astro} />
         </main>
     )
 }
